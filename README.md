@@ -1,1 +1,2 @@
-# bit-3
+# HarryPotterApp
+Angular Project 
