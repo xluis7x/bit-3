@@ -1,2 +1,34 @@
 <app-navigation/>
-<p>api works!</p>
+@for (book of books; track $index) {
+    <div>
+        <p>{{book.title}}</p>
+        <p>{{book.description}}</p>
+        <span>{{book.releaseDate}}</span>
+        <span>||{{book.pages}}</span>
+        <div>
+        <img [ngSrc]="book.cover" width="200" height="280" alt="">
+        </div>
+        <hr>
+    </div>
+}
+
+@for (house of houses; track $index) {
+    <div>
+        <p>{{house.house}}</p>
+        <p>{{house.founder}}</p>
+        <span>{{house.animal}}</span>
+        <span>||{{house.emoji}}</span>
+        <hr>
+    </div>
+}
+@for (char of chars; track $index) {
+        <div>
+            <p>{{char.fullName}}</p>
+            <p>{{char.nickname}}</p>
+            <p>{{char.birthdate}}</p>
+            <p>{{char.children}}</p>
+            <p>{{char.hogwartsHouse}}</p>
+            <img [ngSrc]="char.image" width="200" height="300" alt="">
+        </div>
+        <hr>
+    }
