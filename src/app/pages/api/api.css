@@ -1,0 +1,77 @@
+h2,
+h3 {
+    font-family: 'Josefin Sans Bold';
+    line-height: 1;
+}
+
+h2 {
+    color: var(--color-light-pink);
+    margin-block-start: 2rem;
+    display: inline-block;
+}
+
+.widthP {
+    width: 60%;
+    margin: auto;
+}
+
+.myBigBox {
+    background-color: var(--color-light-pink);
+    padding-block: 1rem;
+    text-align: center;
+    font-family: 'Josefin Sans';
+}
+
+.myBigBox h2 {
+    color: var(--color-dark-blue);
+}
+.myBigBox p {
+    font-size: 18px;
+}
+
+.myBox {
+    border-radius: 18px;
+    border:  5px double var(--color-gold);
+    display:inline-block;
+    width: 20rem;
+    padding-block: 1rem;
+    margin: 1rem;
+    line-height: 1;
+}
+
+.bookCover {
+    margin-block: 12px;
+    border: 2px inset var(--color-dark-blue);
+    border-radius: 20px;
+
+}
+
+.darkBack {
+    background-color: var(--color-dark-blue);
+    text-align: center;
+    padding-block-end: 2.5rem;
+    font-family: 'Josefin Sans';
+    font-size: 18px;
+}
+
+.charP {
+    margin-block-end: 1rem;
+    color: var(--color-light-pink);
+}
+
+.card {
+    margin-block-start: 1rem;
+    background-color: var(--color-gold);
+    padding-block: 1rem;
+    color: var(--color-dark-blue);
+}
+
+.radius {
+    border-radius: 18px;
+}
+
+.backImgSection {
+    background-image: url(../../../assets/api-background.jpg);
+    height: 25rem;
+    opacity: 90%
+}

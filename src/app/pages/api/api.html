@@ -1,34 +1,44 @@
-<app-navigation/>
-@for (book of books; track $index) {
-    <div>
-        <p>{{book.title}}</p>
-        <p>{{book.description}}</p>
-        <span>{{book.releaseDate}}</span>
-        <span>||{{book.pages}}</span>
-        <div>
-        <img [ngSrc]="book.cover" width="200" height="280" alt="">
-        </div>
-        <hr>
-    </div>
-}
+<app-navigation />
+<app-header />
 
-@for (house of houses; track $index) {
-    <div>
-        <p>{{house.house}}</p>
-        <p>{{house.founder}}</p>
-        <span>{{house.animal}}</span>
-        <span>||{{house.emoji}}</span>
-        <hr>
+<div class="myBigBox">
+    <h2>The Books That Started It All</h2>
+    <p class="widthP">Before the spells, battles, and epic movie moments, it all began with the books. Dive into J.K.
+        Rowling’s magical world page by page — from The Philosopher’s Stone to The Deathly Hallows. Each book takes you
+        deeper into the story, uncovering secrets, friendships, and dark twists you won’t find anywhere else. Whether
+        you're rereading or just getting started, this is where the real magic lives.</p>
+    @for (book of books; track $index) {
+    <div class="myBox">
+        <h3>{{book.title}}</h3>
+        <!-- <p>{{book.description}}</p> -->
+        <p>Release Date: {{book.releaseDate}}</p>
+        <p>Pages: {{book.pages}}</p>
+        <img class="bookCover" [ngSrc]="book.cover" width="200" height="280" alt="">
     </div>
-}
-@for (char of chars; track $index) {
-        <div>
-            <p>{{char.fullName}}</p>
-            <p>{{char.nickname}}</p>
-            <p>{{char.birthdate}}</p>
-            <p>{{char.children}}</p>
-            <p>{{char.hogwartsHouse}}</p>
-            <img [ngSrc]="char.image" width="200" height="300" alt="">
-        </div>
-        <hr>
     }
+</div>
+<div class="backImgSection"></div>
+<div class="darkBack ">
+    <h2> Meet the Magic: Harry Potter Characters</h2>
+    <p class="charP widthP">Step into the wizarding world and explore the unforgettable characters that brought the
+        Harry Potter universe to life. From the brave trio of Harry, Hermione, and Ron to powerful wizards like
+        Dumbledore and Voldemort — each one has a story, a purpose, and a touch of magic that shaped the fate of
+        Hogwarts and beyond. Whether you're into the heroes, villains, or those caught in between, this is where the
+        magic begins.</p>
+    <div class="container text-center mx-auto">
+        <div class="row gap-3 mx-auto ">
+            @for (char of chars; track $index) {
+            <div class="card col-8" style="width: 19rem;">
+                <img class=" radius img-fluid card-img-top" [ngSrc]="char.image" width="180" height="250" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">{{char.fullName}} | Nickname: {{char.nickname}}</h5>
+                    <p class="card-text">Birthdate: {{char.birthdate}}</p>
+                    <p>Children: {{char.children}}</p>
+                    <p class="card-text"><small class="text-body-secondary">House: {{char.hogwartsHouse}}</small>
+                    </p>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</div>

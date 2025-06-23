@@ -2,10 +2,11 @@ import { Component, inject, OnInit } from '@angular/core';
 import { Navigation } from '../../shared/navigation/navigation';
 import { PotterApi } from '../../services/api';
 import { NgOptimizedImage } from '@angular/common';
+import { Header } from '../../shared/header/header';
 
 @Component({
   selector: 'app-api',
-  imports: [Navigation, NgOptimizedImage],
+  imports: [Navigation, NgOptimizedImage, Header],
   templateUrl: './api.html',
   styleUrl: './api.css'
 })
