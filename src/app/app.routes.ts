@@ -9,17 +9,17 @@ export const routes: Routes = [
     {
         path: 'api',
         component: Api,
-        title: 'Discover | Harry Potter App',
+        title: 'Discover | Harry Potter World',
     },
     {
         path: 'contactUs',
         component: ContactUs,
-        title: 'Contact Us | Harry Potter App'
+        title: 'Contact Us | Harry Potter World'
     },
     {
         path: 'home',
         component: Home,
-        title: 'Home | Harry Potter App',
+        title: 'Home | Harry Potter World',
     },
     {
         path: "",
