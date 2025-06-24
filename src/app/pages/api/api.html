@@ -1,6 +1,6 @@
 <app-navigation />
+@defer {
 <app-header />
-
 <div class="myBigBox">
     <h2>The Books That Started It All</h2>
     <p class="widthP">Before the spells, battles, and epic movie moments, it all began with the books. Dive into J.K.
@@ -17,6 +17,16 @@
     </div>
     }
 </div>
+
+} @loading (minimum 3s) {
+<hr>
+<div class="d-flex justify-content-center">
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+}
+@defer (on viewport) {
 <div class="backImgSection"></div>
 <div class="darkBack ">
     <h2> Meet the Magic: Harry Potter Characters</h2>
@@ -28,12 +38,16 @@
     <div class="container text-center mx-auto">
         <div class="row gap-3 mx-auto ">
             @for (char of chars; track $index) {
-            <div class="card col-8" style="width: 19rem;">
-                <img class=" radius img-fluid card-img-top" [ngSrc]="char.image" width="180" height="250" alt="">
+            <div class="card col-8 mx-auto" style="width: 18rem;">
+                <img class=" radius img-fluid card-img-top" [ngSrc]="char.image" width="100" height="150" alt="">
                 <div class="card-body">
                     <h5 class="card-title">{{char.fullName}} | Nickname: {{char.nickname}}</h5>
                     <p class="card-text">Birthdate: {{char.birthdate}}</p>
+                    @if (char.children.length == 0) {
+                    <p>Children: No children</p>
+                    } @else {
                     <p>Children: {{char.children}}</p>
+                    }
                     <p class="card-text"><small class="text-body-secondary">House: {{char.hogwartsHouse}}</small>
                     </p>
                 </div>
@@ -42,3 +56,30 @@
         </div>
     </div>
 </div>
+} @placeholder (minimum 8s) {
+<p></p>
+}
+<div>
+    @defer {
+    <div class="spellsImgSection"></div>
+    <div class="spellSection text-center">
+        <h2>Spells & Magic</h2>
+        <p class="widthP">From simple charms to powerful curses, spells are the heart of every wizard’s journey. Whether
+            it’s Lumos to
+            light the way or Expelliarmus to disarm an enemy, each incantation comes with its own story and use. Curious
+            about the spells used at Hogwarts and beyond? Tap into the magic and discover what they do. </p>
+        <p class="widthP">🔮 Want to know more? Click the button below and explore different spells!</p>
+        <div class="card">
+            <div class="card-body">
+                <p></p>
+            </div>
+        </div>
+            <div class="btnNew">
+                <button onclick="getSpells()" class="btn btn-outline-warning">Another One!</button>
+            </div>
+    </div>
+    } @loading (minimum 12s) {
+    <p></p>
+    }
+</div>
+<app-footer />

@@ -1,0 +1,13 @@
+footer {
+    margin: 0;
+    background-color: var(--color-dark-blue);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    color: var(--color-yellow);
+    font-size: 14px;
+    font-family: 'Headland One';
+}
+p {
+    margin: 0;
+}

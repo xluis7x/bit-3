@@ -1,3 +1,7 @@
+hr {
+    opacity: 0%;
+}
+
 h2,
 h3 {
     font-family: 'Josefin Sans Bold';
@@ -15,6 +19,13 @@ h2 {
     margin: auto;
 }
 
+.radius {
+    border-radius: 18px;
+    height: 200px;
+    width: 150px;
+    margin-inline: auto;
+}
+
 .myBigBox {
     background-color: var(--color-light-pink);
     padding-block: 1rem;
@@ -25,6 +36,7 @@ h2 {
 .myBigBox h2 {
     color: var(--color-dark-blue);
 }
+
 .myBigBox p {
     font-size: 18px;
 }
@@ -66,12 +78,25 @@ h2 {
     color: var(--color-dark-blue);
 }
 
-.radius {
-    border-radius: 18px;
-}
-
 .backImgSection {
     background-image: url(../../../assets/api-background.jpg);
     height: 25rem;
     opacity: 90%
+}
+
+.spellsImgSection {
+    background-image: url(../../../assets/spells.jpg);
+    height: 10rem;
+}
+
+.spellSection {
+    background-color: var(--color-light-pink);
+}
+
+.spellSection h2 {
+    color: var(--color-dark-blue);
+}
+
+.btnNew {
+    padding: 1.5rem;
 }

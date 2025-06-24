@@ -1,0 +1,8 @@
+.homepage {
+    background-color: var(--color-yellow);
+    margin: 1rem;
+    padding-inline: 4rem;
+    padding-block: 2rem;
+    font-family: 'Josefin Sans';
+    font-size: large;
+}

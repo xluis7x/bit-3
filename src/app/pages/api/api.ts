@@ -3,10 +3,11 @@ import { Navigation } from '../../shared/navigation/navigation';
 import { PotterApi } from '../../services/api';
 import { NgOptimizedImage } from '@angular/common';
 import { Header } from '../../shared/header/header';
+import { Footer } from '../../shared/footer/footer';
 
 @Component({
   selector: 'app-api',
-  imports: [Navigation, NgOptimizedImage, Header],
+  imports: [Navigation, NgOptimizedImage, Header, Footer],
   templateUrl: './api.html',
   styleUrl: './api.css'
 })
@@ -16,7 +17,6 @@ export class Api implements OnInit{
   chars!: any[];
   houses!: any[];
   spells!: any[];
-
   ngOnInit(): void {
     this.api.getBooks().subscribe((res:any)=> {
       this.books = res;
@@ -35,5 +35,4 @@ export class Api implements OnInit{
       console.log(this.spells)
     })
   }
-
 }
